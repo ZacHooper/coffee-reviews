@@ -20,7 +20,7 @@ pub fn App() -> impl IntoView {
         // <Link rel="shortcut icon" type_="image/ico" href="/favicon.ico"/>
         <Router>
             <Routes>
-                <Route path="" view=Home/>
+                <Route path="/" view=Home/>
             </Routes>
         </Router>
     }
