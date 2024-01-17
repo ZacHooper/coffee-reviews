@@ -548,6 +548,16 @@ video {
   position: static;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .grid {
   display: grid;
 }
@@ -594,12 +604,21 @@ video {
   justify-self: center;
 }
 
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
 .rounded-sm {
   border-radius: 0.125rem;
 }
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.bg-coffee-dark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(176 146 106 / var(--tw-bg-opacity));
 }
 
 .bg-coffee-lightest {
@@ -620,9 +639,32 @@ video {
   padding: 1.5rem;
 }
 
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .px-16 {
   padding-left: 4rem;
   padding-right: 4rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-center {
@@ -638,6 +680,11 @@ video {
   line-height: 2.25rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .text-coffee-black {
   --tw-text-opacity: 1;
   color: rgb(61 56 40 / var(--tw-text-opacity));
@@ -650,4 +697,9 @@ video {
 .hover\:bg-coffee-light:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(225 199 143 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-coffee-lightest:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 231 201 / var(--tw-bg-opacity));
 }
