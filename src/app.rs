@@ -4,6 +4,7 @@ use leptos_router::*;
 
 #[component]
 pub fn Home() -> impl IntoView {
+    logging::log!("Hi, from Home!");
     view! {
         <h1>"Hello, World!"</h1>
     }
@@ -11,6 +12,7 @@ pub fn Home() -> impl IntoView {
 
 #[component]
 pub fn App() -> impl IntoView {
+    logging::log!("Hi, from App!");
     provide_meta_context();
 
     view! {
