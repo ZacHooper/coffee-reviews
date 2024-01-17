@@ -267,7 +267,7 @@ pub fn App() -> impl IntoView {
 
     view! {
         // <Stylesheet id="leptos" href="/pkg/coffee-reviews.css"/>
-        <Link rel="shortcut icon" type_="image/ico" href="/favicon.ico"/>
+        // <Link rel="shortcut icon" type_="image/ico" href="/favicon.ico"/>
         <Router>
             <Routes>
                 <Route path="" view=Home/>
