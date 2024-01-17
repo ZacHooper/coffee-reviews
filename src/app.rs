@@ -266,7 +266,7 @@ pub fn App() -> impl IntoView {
     provide_meta_context();
 
     view! {
-        // <Stylesheet id="leptos" href="/pkg/coffee-reviews.css"/>
+        // <Stylesheet id="leptos" href="/pkg/output.css"/>
         // <Link rel="shortcut icon" type_="image/ico" href="/favicon.ico"/>
         <Router>
             <Routes>
