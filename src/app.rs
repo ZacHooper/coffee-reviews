@@ -8,7 +8,7 @@ pub fn App() -> impl IntoView {
 
     view! {
 
-        <Stylesheet id="leptos" href="/static/styles/output.css"/>
+        <Stylesheet id="leptos" href="output.css"/>
         <Link rel="shortcut icon" type_="image/ico" href="/favicon.ico"/>
         <Router>
             <Routes>

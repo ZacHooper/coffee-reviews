@@ -884,7 +884,7 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-        input = new URL('coffee-reviews-8789a6f250fa193775a3e10e3424fdfea1d7ab77b645fe6312089c76e71b1cbd07c08743cab7f71c4949fc16ae2ccba4_bg.wasm', import.meta.url);
+        input = new URL('coffee-reviews-471564740331507ab238ab069add52e4c0164e09dd4cd3aaadf253ca9c1364c4da96be26d797e8e46ea118025047da79_bg.wasm', import.meta.url);
     }
     const imports = __wbg_get_imports();
 
