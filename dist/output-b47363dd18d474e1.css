@@ -595,6 +595,10 @@ video {
   display: grid;
 }
 
+.h-3 {
+  height: 0.75rem;
+}
+
 .h-full {
   height: 100%;
 }
@@ -658,9 +662,19 @@ video {
   padding: 1rem;
 }
 
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pt-6 {
@@ -692,15 +706,6 @@ video {
 .text-coffee-black {
   --tw-text-opacity: 1;
   color: rgb(61 56 40 / var(--tw-text-opacity));
-}
-
-.accent-coffee-lightest {
-  accent-color: #FAE7C9;
-}
-
-.hover\:bg-coffee-light:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(225 199 143 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 640px) {

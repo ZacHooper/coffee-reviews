@@ -64,7 +64,7 @@ pub fn Select(
     view! {
         <select
             id=id
-            class="p-2 bg-coffee-lightest rounded-sm text-2xl sm:text-base"
+            class="p-2 bg-coffee-lightest rounded-sm text-2xl lg:text-base"
             on:change=move |ev| on_change(event_target_value(&ev))
         >
             {children()}
@@ -85,7 +85,7 @@ pub fn NumberInput(
         <input
             id=id
             type="number"
-            class="p-2 bg-coffee-lightest rounded-sm text-2xl sm:text-base"
+            class="px-2 py-4 bg-coffee-lightest rounded-sm text-2xl lg:text-base"
             min=min
             max=max
             step=step
@@ -212,7 +212,7 @@ fn Home() -> impl IntoView {
             justify-self-center self-center">
 
                 // Form
-                <form on:submit=on_submit class="pt-6 grid gap-2 lg:gap-1">
+                <form on:submit=on_submit class="pt-6 grid gap-2 lg:gap-1 text-2xl sm:text-base">
                     // <label for="brew-method" class="text-right">"Brew Method: "</label>
                     <Label for_="brew-method" children="Brew Method: "/>
                     <Select id="brew-method" on_change=set_brew_method>
@@ -256,7 +256,7 @@ fn Home() -> impl IntoView {
                     <input id="strength" type="range" value="5" min="1" max="10" step="1" class="p-2"
                         prop:value=strength
                         on:input=create_number_input_handler(set_strength)
-                        class="p-2 accent-coffee-lightest bg-coffee-white hover:bg-coffee-light"
+                        class="w-full h-3 range-lg"
                     />
 
                     <Label for_="notes" children="Notes: "/>
