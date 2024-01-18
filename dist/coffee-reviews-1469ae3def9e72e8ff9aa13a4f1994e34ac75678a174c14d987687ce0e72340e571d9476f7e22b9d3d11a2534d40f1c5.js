@@ -680,12 +680,12 @@ imports.wbg.__wbindgen_closure_wrapper575 = function(arg0, arg1, arg2) {
     const ret = makeMutClosure(arg0, arg1, 41, __wbg_adapter_30);
     return addHeapObject(ret);
 };
-imports.wbg.__wbindgen_closure_wrapper3779 = function(arg0, arg1, arg2) {
-    const ret = makeMutClosure(arg0, arg1, 442, __wbg_adapter_33);
+imports.wbg.__wbindgen_closure_wrapper3817 = function(arg0, arg1, arg2) {
+    const ret = makeMutClosure(arg0, arg1, 448, __wbg_adapter_33);
     return addHeapObject(ret);
 };
-imports.wbg.__wbindgen_closure_wrapper8915 = function(arg0, arg1, arg2) {
-    const ret = makeMutClosure(arg0, arg1, 520, __wbg_adapter_36);
+imports.wbg.__wbindgen_closure_wrapper8953 = function(arg0, arg1, arg2) {
+    const ret = makeMutClosure(arg0, arg1, 526, __wbg_adapter_36);
     return addHeapObject(ret);
 };
 
@@ -726,7 +726,7 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-        input = new URL('coffee-reviews-348307f53ad1395144c4a307f88c56591cd25ad2335a23ef69c9068ca2b525120c844548fd0b88f651da72aa1d3745f1_bg.wasm', import.meta.url);
+        input = new URL('coffee-reviews-1469ae3def9e72e8ff9aa13a4f1994e34ac75678a174c14d987687ce0e72340e571d9476f7e22b9d3d11a2534d40f1c5_bg.wasm', import.meta.url);
     }
     const imports = __wbg_get_imports();
 

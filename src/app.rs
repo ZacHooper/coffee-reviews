@@ -8,11 +8,16 @@ use wasm_bindgen_futures::spawn_local;
 #[component]
 pub fn App() -> impl IntoView {
     view! {
-        <div class="font-fira-mono flex flex-col bg-stone-950 min-h-screen text-base text-center text-gray-300">
-            <div class="flex flex-1 flex-col items-center">
-                <Home/>
+        <main id="container" class="bg-coffee-lightest h-screen w-full flex flex-col">
+            <div id="header" class="bg-coffee-lightest text-coffee-black p-4 text-center h-max sm:text-4xl">
+                <h1 class="text-3xl sm:text-5xl">"Coffee Review"</h1>
             </div>
-        </div>
+            <Home/>
+            <div id="footer" class="bg-coffee-lightest text-coffee-black p-4 w-full text-center sm:text-2xl">
+                <p>"Made with ❤️ by "</p>
+                <a href="zachooper.com" class="text-coffee-black">"Zac"</a>
+            </div>
+        </main>
     }
 }
 
@@ -59,7 +64,7 @@ pub fn Select(
     view! {
         <select
             id=id
-            class="p-2 bg-coffee-lightest rounded-sm"
+            class="p-2 bg-coffee-lightest rounded-sm text-2xl sm:text-base"
             on:change=move |ev| on_change(event_target_value(&ev))
         >
             {children()}
@@ -80,7 +85,7 @@ pub fn NumberInput(
         <input
             id=id
             type="number"
-            class="p-2 bg-coffee-lightest rounded-sm"
+            class="p-2 bg-coffee-lightest rounded-sm text-2xl sm:text-base"
             min=min
             max=max
             step=step
@@ -94,7 +99,7 @@ pub fn NumberInput(
 #[component]
 pub fn Label(for_: &'static str, children: &'static str) -> impl IntoView {
     view! {
-        <label for=for_ class="text-right self-center">{children}</label>
+        <label for=for_ class="text-left self-center text-2xl lg:text-base">{children}</label>
     }
 }
 
@@ -200,15 +205,14 @@ fn Home() -> impl IntoView {
     };
 
     view! {
-        <main class="bg-coffee-lightest h-full min-h-screen w-full grid">
+        <div class="flex-grow grid mx-16">
             <div class="
             bg-coffee-white text-coffee-black
-            max-w-3xl h-max rounded-xl px-16
+            rounded-xl px-8 lg:px-16 h-full w-full lg:max-w-3xl
             justify-self-center self-center">
-                <h1 class="p-6 text-3xl text-center">"Coffee Review"</h1>
 
                 // Form
-                <form on:submit=on_submit class="grid grid-cols-[max-content_1fr] gap-y-1 gap-x-4 ">
+                <form on:submit=on_submit class="pt-6 grid gap-2 lg:gap-1">
                     // <label for="brew-method" class="text-right">"Brew Method: "</label>
                     <Label for_="brew-method" children="Brew Method: "/>
                     <Select id="brew-method" on_change=set_brew_method>
@@ -266,6 +270,6 @@ fn Home() -> impl IntoView {
                     <button type="submit">"Submit"</button>
                 </form>
             </div>
-        </main>
+        </div>
     }
 }
