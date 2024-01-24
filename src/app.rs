@@ -49,6 +49,16 @@ where
 }
 
 #[component]
+pub fn SuccessDialog(open: ReadSignal<bool>) -> impl IntoView {
+    view! {
+        <dialog class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" open={open}>
+            <strong class="font-bold">"Success! "</strong>
+            <span class="block sm:inline">"Your coffee review has been submitted."</span>
+        </dialog>
+    }
+}
+
+#[component]
 pub fn SelectOption(is: &'static str, value: ReadSignal<String>) -> impl IntoView {
     view! {
         <option value=is selected=move || value.get() == is>{is}</option>
@@ -105,6 +115,9 @@ pub fn Label(for_: &'static str, children: &'static str) -> impl IntoView {
 
 #[component]
 fn Home() -> impl IntoView {
+    // UI State
+    let (show_success_message, set_show_success_message) = create_signal(false);
+
     // Form Inputs
     let (brew_method, set_brew_method) = create_signal("pour-over".to_string());
     let (coffee, set_coffee) = create_signal("ocean_grind".to_string());
@@ -267,8 +280,9 @@ fn Home() -> impl IntoView {
                         {untrack(move || notes.get())}
                     </textarea>
 
-                    <button type="submit">"Submit"</button>
+                    <button type="submit" on:click=move |_| set_show_success_message(true)>"Submit"</button>
                 </form>
+                <SuccessDialog open=show_success_message/>
             </div>
         </div>
     }
