@@ -166,6 +166,23 @@ fn Home() -> impl IntoView {
             nickname: "Seven Seeds - Habtamu Fekadu".to_string(),
         },
     );
+    coffees.insert(
+        "Inglewood".to_string(),
+        Coffee {
+            name: "Hambela".to_string(),
+            roastery: "Inglewood Coffee Roasters".to_string(),
+            roast_date: "2024-02-06".to_string(),
+            roast_level: "Light".to_string(),
+            origin: "Ethiopia".to_string(),
+            region: "Guji, Benti Neka".to_string(),
+            farm: "".to_string(),
+            altitude: 1725.0,
+            variety: "Hambela".to_string(),
+            processing_method: "Washed".to_string(),
+            tasting_notes: "Chamomile, tangerine, toffee, honey".to_string(),
+            nickname: "Inglewood - Hambela".to_string(),
+        },
+    );
 
     // let brew_method: NodeRef<Input> = create_node_ref();
 
@@ -239,6 +256,7 @@ fn Home() -> impl IntoView {
                     <Select id="coffee" on_change=set_coffee>
                         <SelectOption value=coffee is="Ocean Grind"/>
                         <SelectOption value=coffee is="Seven Seeds"/>
+                        <SelectOption value=coffee is="Inglewood"/>
                     </Select>
 
                     <Label for_="weight" children="Weight (g): "/>
